@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Building a Spotify Clone with react </h1>
+      <h1>Building a Spotify Clone with react using create-react-app</h1>
     </div>
   );
 }
