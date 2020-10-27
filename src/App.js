@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
+import Login from "./component/Login/Login";
+import { getTokenFromUrl } from "./spotify";
 
 function App() {
+  useEffect(() => {
+    const hash = getTokenFromUrl();
+    window.location.hash = "";
+    const token = hash.access_token;
+  }, []);
+
   return (
-    <div className="App">
-      <h1>Building a Spotify Clone with react using create-react-app</h1>
+    <div className="app">
+      <Login />
     </div>
   );
 }
 
 export default App;
+//
